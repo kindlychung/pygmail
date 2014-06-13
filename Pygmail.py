@@ -21,7 +21,7 @@ class Pygmail:
         msg['To'] = to_addr
         try:
             conn = SMTP('smtp.gmail.com')
-            conn.set_debuglevel(True)
+            # conn.set_debuglevel(True)
             conn.login(self.gaccount, self.gpass)
             try:
                 conn.sendmail(self.gaccount, to_addr, msg.as_string())
