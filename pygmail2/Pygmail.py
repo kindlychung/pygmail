@@ -28,12 +28,3 @@ class Pygmail:
         finally:
             conn.close()
 
-# if __name__ == "__main__":
-#     htmlstr = """
-#     <div style="background-color: yellow">
-#     <img src="http://s2.lemde.fr/image/2014/06/08/534x0/4434307_7_7e9f_une-assemblee-generale-des-intermittents-du_b3fd2b267a605d9ccc9c269c00712624.jpg">
-#     <p><b>There is something!</b><p>
-#     </div>
-#     """
-#     x = Pygmail()
-#     x.send_mail("emma.dessin.belle@gmail.com", "are you ok?", htmlstr)
