@@ -19,5 +19,9 @@ It uses smtp, that's all. You can always check the source code, of course
 
 # Usage
 
+## From a interactive python shell or from any python file:
+
     from pygmail2.Pygmail import Pygmail
     Pygmail().send_mail('u@domain.net', 'hi, there', '<b>important stuff </b>')
+
+## Using the `gmailsend`
