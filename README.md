@@ -3,6 +3,15 @@
 This is a very simple package that enables you to send mail through gmail using python. It's not a big deal, it does not read your emails, no calendars, no drafts...
 It does just one thing, sending emails.
 
+# Requirements
+
+* Python 3
+* pip3 for installation
+
+# Install
+
+pip3 install --upgrade git+https://github.com/kindlychung/pygmail.git
+
 # Security
 
 It uses smtp, that's all. You can always check the source code, of course
