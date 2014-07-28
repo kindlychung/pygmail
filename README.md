@@ -61,13 +61,13 @@ It uses smtp, that's all. You can always check the source code, of course
 
 * Write up your mail body in the shell in a interactive fashion:
 
-    gmailsend.py your@email.org -s hi_there
+`gmailsend.py your@email.org -s hi_there`
 
 * Pipe your mail body to the script:
 
-    echo "<b>hi, how are you?</b>" | gmailsend.py your@email.org -s hi_there
+`echo "<b>hi, how are you?</b>" | gmailsend.py your@email.org -s hi_there`
 
 * Load the mail body with a html file:
 
-    wget www.google.com -O body.html
-    gmailsend.py your@email.org -s hi_there -b body.html
+`wget www.google.com -O body.html`
+`gmailsend.py your@email.org -s hi_there -b body.html`

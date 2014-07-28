@@ -14,8 +14,6 @@ Requirements
 Install
 -------
 
-**I recommend using the github repository, it’s more up-to-date.**
-
 Using ``setup.py``
 ~~~~~~~~~~~~~~~~~~
 
@@ -35,9 +33,17 @@ for example:
 Using pip:
 ~~~~~~~~~~
 
+From github:
+
 ::
 
     pip3 install --upgrade git+https://github.com/kindlychung/pygmail.git
+
+or from PyPI:
+
+::
+
+    pip3 install --upgrade pygmail2
 
 As far as I know pip will not take care of the script files in ``bin/``.
 
@@ -77,13 +83,13 @@ Using the ``gmailsend.py`` in shell
 
 -  Write up your mail body in the shell in a interactive fashion:
 
-   gmailsend.py your@email.org -s hi\_there
+``gmailsend.py your@email.org -s hi_there``
 
 -  Pipe your mail body to the script:
 
-   echo “hi, how are you?” \| gmailsend.py your@email.org -s hi\_there
+``echo "<b>hi, how are you?</b>" | gmailsend.py your@email.org -s hi_there``
 
 -  Load the mail body with a html file:
 
-   wget www.google.com -O body.html gmailsend.py your@email.org -s
-   hi\_there -b body.html
+``wget www.google.com -O body.html``
+``gmailsend.py your@email.org -s hi_there -b body.html``
