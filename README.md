@@ -10,6 +10,8 @@ It does just one thing, sending emails.
 
 ## Install
 
+**I recommend using the github repository, it's more up-to-date.**
+
 ### Using `setup.py`
 
     git clone https://github.com/kindlychung/pygmail.git
