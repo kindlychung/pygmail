@@ -10,8 +10,6 @@ It does just one thing, sending emails.
 
 ## Install
 
-**I recommend using the github repository, it's more up-to-date.**
-
 ### Using `setup.py`
 
     git clone https://github.com/kindlychung/pygmail.git
@@ -24,7 +22,13 @@ You can copy the `gmailsend.py` script to a folder in your `$PATH`, for example:
 
 ### Using pip:
 
+From github:
+
     pip3 install --upgrade git+https://github.com/kindlychung/pygmail.git
+
+or from PyPI:
+
+    pip3 install --upgrade pygmail2
 
 As far as I know pip will not take care of the script files in `bin/`.
 
