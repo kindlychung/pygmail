@@ -18,7 +18,7 @@ class Pygmail:
             self.gaccount = secretinfo[0]
             self.gpass = secretinfo[1]
 
-    def send_mail(self, to_addr = "", subject = "", text = "", attachments = ""):
+    def sm(self, to_addr = "", subject = "", text = "", attachments = ""):
         msg = MIMEMultipart()
 
         if isinstance(to_addr, str):
@@ -50,13 +50,13 @@ class Pygmail:
             conn.close()
 
 
-    def send_mail_file(self, to_addr = "", subject = "", mailfile = "", attachments = ""):
+    def smf(self, to_addr = "", subject = "", mailfile = "", attachments = ""):
         with open(mailfile) as fh:
             text = fh.read()
-        self.send_mail(to_addr, subject, text, attachments = "")
+        self.sm(to_addr, subject, text, attachments = "")
 
 mo = Pygmail()
 
 if __name__ == "__main__":
-    mo.send_mail(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = ["/tmp/hi.txt", "/tmp/you.txt"])
-    mo.send_mail(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = "/tmp/hi.txt")
+    mo.sm(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = ["/tmp/hi.txt", "/tmp/you.txt"])
+    mo.sm(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = "/tmp/hi.txt")
