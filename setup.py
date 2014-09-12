@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name = "pygmail2",
     packages = ["pygmail2"],
-    version = "0.2.5",
+    version = "0.2.6",
     description = "Send mail from gmail using python",
     author = "Kaiyin Zhong",
     author_email = "kindlychung@gmail.com",

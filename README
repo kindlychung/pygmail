@@ -54,11 +54,13 @@ Usage
     from pygmail2.Pygmail import mo
     from pygmail2.Addr import ad
     # send to one address
-    mo.send(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>")
+    mo.sm(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>")
     # send attachments
-    mo.send(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
+    mo.sm(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
     # send to multiple addresses
-    mo.send(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
+    mo.sm(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
+    # use html file as mail body
+    mo.sm(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", mailfile = "/tmp/x.html", attachments = ["/tmp/x.txt", "/tmp/y.png"])
 
 
 
