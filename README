@@ -60,7 +60,7 @@ Usage
     # send to multiple addresses
     mo.sm(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
     # use html file as mail body
-    mo.sm(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", mailfile = "/tmp/x.html", attachments = ["/tmp/x.txt", "/tmp/y.png"])
+    mo.smf(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", mailfile = "/tmp/x.html", attachments = ["/tmp/x.txt", "/tmp/y.png"])
 
 
 
