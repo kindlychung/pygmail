@@ -3,7 +3,7 @@ Description
 
 This is a very simple package that enables you to send mail through
 gmail using python. It’s not a big deal, it does not read your emails,
-no calendars, no drafts… It does just one thing, sending emails.
+no calendars, no drafts… It does just one thing, sending emails (possibly with attachments).
 
 Requirements
 ------------
@@ -23,12 +23,6 @@ Using ``setup.py``
     cd pygmail
     python3 setup.py install
 
-You can copy the ``gmailsend.py`` script to a folder in your ``$PATH``,
-for example:
-
-::
-
-    sudo cp bin/gmailsend.py /usr/local/bin/
 
 Using pip:
 ~~~~~~~~~~
@@ -99,3 +93,10 @@ Using the ``gmailsend.py`` in shell
 
     wget www.google.com -O body.html
     gmailsend.py your@email.org -s hi_there -b body.html
+
+
+Change log
+----------
+
+- Enabled attachments
+- Email address autocompletion
