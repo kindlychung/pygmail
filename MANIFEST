@@ -2,5 +2,6 @@
 README
 setup.cfg
 setup.py
+pygmail2/Addr.py
 pygmail2/Pygmail.py
 pygmail2/__init__.py

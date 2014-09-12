@@ -39,7 +39,6 @@ or from PyPI:
 
     pip3 install --upgrade pygmail2
 
-As far as I know pip will not take care of the script files in ``bin/``.
 
 Security
 --------
@@ -50,53 +49,25 @@ course
 Usage
 -----
 
-From a interactive python shell or from any python file:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ::
 
-    from pygmail2.Pygmail import Pygmail
-    Pygmail().send_mail('u@domain.net', 'hi, there', '<b>important stuff </b>')
+    from pygmail2.Pygmail import mo
+    from pygmail2.Addr import ad
+    # send to one address
+    mo.send(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>")
+    # send attachments
+    mo.send(to_addr = "xyz@example.com", subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
+    # send to multiple addresses
+    mo.send(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", text = "<b>hi there</b>", attachments = ["/tmp/x.txt", "/tmp/y.png"])
 
-Using the ``gmailsend.py`` in shell
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
 
-    gmailsend.py -h
-    usage: A python script for sending emails from commandline using gmail
-           [-h] [--subj SUBJ] [--body_file BODY_FILE] to_addr
-
-    positional arguments:
-      to_addr               Recepient email address
-
-    optional arguments:
-      -h, --help            show this help message and exit
-      --subj SUBJ, -s SUBJ  Subject of the email
-      --body_file BODY_FILE, -b BODY_FILE
-
--  Write up your mail body in the shell in a interactive fashion:
-
-::
-
-    gmailsend.py your@email.org -s hi_there
-
--  Pipe your mail body to the script:
-
-::
-
-    echo "<b>hi, how are you?</b>" | gmailsend.py your@email.org -s hi_there
-
--  Load the mail body with a html file:
-
-::
-
-    wget www.google.com -O body.html
-    gmailsend.py your@email.org -s hi_there -b body.html
 
 
 Change log
 ----------
 
+- single recipient and single attachment now don't require using list
 - Enabled attachments
 - Email address autocompletion
+

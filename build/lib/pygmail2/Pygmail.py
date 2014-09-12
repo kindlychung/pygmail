@@ -18,20 +18,21 @@ class Pygmail:
             self.gaccount = secretinfo[0]
             self.gpass = secretinfo[1]
 
-    def send_mail(self, to_addr, subject, text, attachments = ""):
+    def send_mail(self, to_addr = "", subject = "", text = "", attachments = ""):
         msg = MIMEMultipart()
 
-        if isinstance(to_addr, list) or isinstance(to_addr, tuple):
-            msg['To'] = ", ".join(to_addr)
-        else:
-            msg["To"] = to_addr
+        if isinstance(to_addr, str):
+            to_addr = [to_addr]
 
         msg['From'] = self.gaccount
+        msg['To'] = ", ".join(to_addr)
         msg['Date'] = formatdate(localtime=True)
         msg['Subject'] = subject
         msg.attach(MIMEText(text, "html"))
 
         if attachments:
+            if isinstance(attachments, str):
+                attachments = [attachments]
             for attachment in attachments:
                 part = MIMEBase("application", "octet-stream")
                 part.set_payload(open(attachment, "rb").read())
@@ -49,9 +50,13 @@ class Pygmail:
             conn.close()
 
 
-    def send_mail_file(self, to_addr, subject, mailfile, attachments = ""):
+    def send_mail_file(self, to_addr = "", subject = "", mailfile = "", attachments = ""):
         with open(mailfile) as fh:
             text = fh.read()
         self.send_mail(to_addr, subject, text, attachments = "")
 
 mo = Pygmail()
+
+if __name__ == "__main__":
+    mo.send_mail(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = ["/tmp/hi.txt", "/tmp/you.txt"])
+    mo.send_mail(to_addr = "kindlychung@gmail.com", subject = "hiyou", text = "<b>hi</b>", attachments = "/tmp/hi.txt")
