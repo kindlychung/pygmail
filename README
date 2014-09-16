@@ -49,6 +49,15 @@ course
 Usage
 -----
 
+You need put your gmail account and password in ~/.pygmailrc, for example:
+
+::
+
+    xyz@gmail.com
+    xyz_super_secret
+
+Then from python shell you can do things like:
+
 ::
 
     from pygmail2.Pygmail import mo
@@ -62,8 +71,34 @@ Usage
     # use html file as mail body
     mo.smf(to_addr = ["xyz@example.com", "aaa@bbb.org"], subject= "test", mailfile = "/tmp/x.html", attachments = ["/tmp/x.txt", "/tmp/y.png"])
 
+You can store an address book in the csv format in the ~/.pygmail/email.csv file. For example:
 
+::
 
+    Xiao Lu,xl@eepcxx.org
+
+Then you access this email address by:
+
+::
+
+    ad.xiao_lu_xl_eepcxx_org
+
+The advantage of this is that you got autocompletion for free.
+
+To save some typing, you can put the following lines in ~/.pygmail/startup.py:
+
+::
+
+    from pygmail2.Pygmail import mo
+    from pygmail2.Addr import ad
+
+And in your ~/.bash_aliases you can say:
+
+::
+
+    alias pym='PYTHONSTARTUP=~/.pygmail/startup.py ipython3'
+
+Then every time you want to send an email, you can just start it up by pym.
 
 
 Change log
