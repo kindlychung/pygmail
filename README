@@ -59,6 +59,7 @@ You need put your gmail account and password in ~/.pygmailrc, for example:
 From the shell:
 
 ::
+
     echo "hi there" | gmailsend xxx@yyy.com --subj hi --attach /path/to/file
     gmailsend xxx@yyy.com --subj hi --attach /path/to/file --body_file /path/to/bodyfile
     ## for help
