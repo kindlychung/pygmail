@@ -10,7 +10,7 @@ else:
 setup(
     name = "pygmail2",
     packages = ["pygmail2"],
-    version = "0.3.1",
+    version = "0.3.3",
     data_files = [(binpath, ["scripts/gmailsend"])],
     description = "Send mail from gmail using python",
     author = "Kaiyin Zhong",
