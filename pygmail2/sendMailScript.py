@@ -22,7 +22,7 @@ def main():
     if args.attach == None:
         args.attach = ""
 
-    mo.sm(args.to_addr, args.subj, mailbody, args.attach)
+    mo.sm(args.to, args.subj, mailbody, args.attach)
 
 if __name__ == "__main__":
     main()

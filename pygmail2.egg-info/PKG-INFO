@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: pygmail2
-Version: 0.3.5
+Version: 0.3.7
 Summary: Send mail from gmail using python
 Home-page: https://github.com/kindlychung/pygmail
 Author: Kaiyin Zhong
