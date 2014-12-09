@@ -1,17 +1,10 @@
-from distutils.core import setup
-
-import platform, os
-sysname = platform.system()
-if sysname == "Windows":
-    binpath = os.getenv("SystemRoot")
-else:
-    binpath = r"/usr/local/bin"
+from setuptools import setup
 
 setup(
     name = "pygmail2",
     packages = ["pygmail2"],
-    version = "0.3.3",
-    data_files = [(binpath, ["scripts/gmailsend"])],
+    version = "0.3.5",
+    entry_points = {"console_scripts": ['gmailsend = pygmail2.sendMailScript:main']},
     description = "Send mail from gmail using python",
     author = "Kaiyin Zhong",
     author_email = "kindlychung@gmail.com",

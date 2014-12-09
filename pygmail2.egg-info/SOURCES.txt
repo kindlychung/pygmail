@@ -1,0 +1,13 @@
+MANIFEST.in
+README
+setup.cfg
+setup.py
+pygmail2/Addr.py
+pygmail2/Pygmail.py
+pygmail2/__init__.py
+pygmail2/sendMailScript.py
+pygmail2.egg-info/PKG-INFO
+pygmail2.egg-info/SOURCES.txt
+pygmail2.egg-info/dependency_links.txt
+pygmail2.egg-info/entry_points.txt
+pygmail2.egg-info/top_level.txt
